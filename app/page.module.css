@@ -1,0 +1,57 @@
+.editorialStrip {
+  position: relative;
+  height: clamp(20rem, 42vw, 40rem);
+  margin: 0;
+  overflow: hidden;
+  background: #d7d0c4;
+}
+
+.editorialStrip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.editorialStrip:hover img {
+  transform: scale(1.015);
+}
+
+.editorialStrip figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(243, 239, 230, 0.55);
+  background: rgba(23, 21, 18, 0.58);
+  color: var(--paper);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.editorialStrip figcaption span {
+  padding: 1.25rem clamp(1rem, 4vw, 4rem);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.editorialStrip figcaption span + span {
+  border-left: 1px solid rgba(243, 239, 230, 0.3);
+}
+
+@media (max-width: 720px) {
+  .editorialStrip figcaption {
+    grid-template-columns: 1fr;
+  }
+
+  .editorialStrip figcaption span {
+    padding-block: 0.75rem;
+  }
+
+  .editorialStrip figcaption span + span {
+    border-top: 1px solid rgba(243, 239, 230, 0.3);
+    border-left: 0;
+  }
+}

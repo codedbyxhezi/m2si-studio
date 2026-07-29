@@ -1,0 +1,129 @@
+.section {
+  padding: clamp(7rem, 12vw, 12rem) max(5vw, 1.5rem);
+  background: var(--ivory);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--oxblood);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.label i {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(18rem, 0.6fr);
+  align-items: end;
+  gap: clamp(3rem, 9vw, 10rem);
+  padding-block: clamp(4rem, 8vw, 8rem);
+}
+
+.content h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 7.1vw, 7.4rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.content h2 em {
+  color: var(--oxblood);
+  font-weight: 400;
+}
+
+.copy {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.copy p {
+  margin: 0;
+}
+
+.copy p + p {
+  margin-top: 1.5rem;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding-block: 2rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.stack span {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: clamp(3rem, 7vw, 6rem);
+}
+
+.facts div {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.5rem 0;
+}
+
+.facts div + div {
+  padding-left: clamp(1rem, 4vw, 4rem);
+  border-left: 1px solid var(--line);
+}
+
+.facts strong {
+  font-family: var(--serif);
+  font-size: clamp(3.3rem, 6vw, 6.5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.facts span {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 860px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .copy {
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .facts div + div {
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+}

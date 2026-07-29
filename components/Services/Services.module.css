@@ -1,0 +1,130 @@
+.section {
+  padding: clamp(7rem, 12vw, 12rem) max(5vw, 1.5rem);
+  background: var(--paper);
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr 0.8fr;
+  align-items: start;
+  gap: 2rem;
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.intro > p:first-child {
+  margin: 0;
+  color: var(--oxblood);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.intro h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(3.6rem, 7.2vw, 7.4rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.88;
+}
+
+.intro h2 em {
+  color: var(--oxblood);
+  font-weight: 400;
+}
+
+.introCopy {
+  align-self: end;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.grid article {
+  padding: clamp(2rem, 4vw, 4rem);
+}
+
+.grid article + article {
+  border-left: 1px solid var(--line);
+}
+
+.grid article > span {
+  color: var(--oxblood);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+}
+
+.grid h3 {
+  min-height: 5.5rem;
+  margin: 2rem 0 1.25rem;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.grid article > p {
+  min-height: 7rem;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.grid ul {
+  display: grid;
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.78rem;
+}
+
+.grid li::before {
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 50%;
+  background: var(--oxblood);
+  content: "";
+}
+
+@media (max-width: 900px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  .introCopy {
+    max-width: 38rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid article + article {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .grid h3,
+  .grid article > p {
+    min-height: 0;
+  }
+}

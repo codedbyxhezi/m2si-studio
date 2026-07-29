@@ -1,0 +1,5 @@
+.main {
+  min-height: 100svh;
+  padding-top: 5.25rem;
+  background: var(--ivory);
+}
