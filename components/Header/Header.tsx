@@ -140,7 +140,7 @@ export default function Header({ solid = false }: HeaderProps) {
           onClick={closeMenu}
         >
           <span>M²SI</span>
-          <small>Studio</small>
+          <small>Design & Developing</small>
         </a>
 
         <div className={`${styles.sideNav} ${styles.sideNavRight}`}>

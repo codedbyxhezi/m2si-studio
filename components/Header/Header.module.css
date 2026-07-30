@@ -85,7 +85,7 @@
 }
 
 .brand small {
-  color: var(--copper);
+  color: white;
   font-family: var(--mono);
   font-size: 0.52rem;
   letter-spacing: 0.26em;
