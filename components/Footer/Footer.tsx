@@ -14,7 +14,7 @@ const socialLinks = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/DEIN_PROFIL",
+    href: "https://github.com/codedbyxhezi?tab=repositories",
   },
   {
     label: "LinkedIn",

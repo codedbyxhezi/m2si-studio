@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import styles from "./Header.module.css";
 
 type HeaderProps = {
@@ -23,6 +25,7 @@ const mobileLinks = [
   { href: "/projekte", label: "Projekte" },
   { href: "/leistungen", label: "Leistungen" },
   { href: "/studio", label: "Studio" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 const socialLinks: {
@@ -37,7 +40,7 @@ const socialLinks: {
   },
   {
     label: "GitHub",
-    href: "https://github.com/DEIN_PROFIL",
+    href: "https://github.com/codedbyxhezi?tab=repositories",
     icon: "github",
   },
   {
@@ -133,15 +136,21 @@ export default function Header({ solid = false }: HeaderProps) {
           ))}
         </div>
 
-        <a
+        <Link
           className={styles.brand}
           href="/#top"
-          aria-label="MSI Studio – zur Startseite"
+          aria-label="M²SI Studio – zur Startseite"
           onClick={closeMenu}
         >
-          <span>M²SI</span>
-          <small>Design & Developing</small>
-        </a>
+          <Image
+            className={styles.brandLogo}
+            src="/images/logo/m2si-logo-transparent.png"
+            alt=""
+            width={1254}
+            height={1254}
+            priority
+          />
+        </Link>
 
         <div className={`${styles.sideNav} ${styles.sideNavRight}`}>
           {rightLinks.map((link) => (
@@ -192,7 +201,7 @@ export default function Header({ solid = false }: HeaderProps) {
         <div className={styles.menuFooter}>
           <a
             className={styles.contactButton}
-            href="/kontakt"
+            href="/kontakt#projektanfrage"
             onClick={closeMenu}
             tabIndex={open ? 0 : -1}
           >

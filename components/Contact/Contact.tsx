@@ -221,7 +221,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form className={styles.wizard} onSubmit={handleSubmit}>
+        <form id="projektanfrage" className={styles.wizard} onSubmit={handleSubmit}>
           {status === "success" ? (
             <div className={styles.success}>
               <span className={styles.successMark}>✓</span>

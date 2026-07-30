@@ -171,6 +171,10 @@
 
 /* Formular-Card */
 
+.form {
+  scroll-margin-top: 5.75rem;
+}
+
 .wizard {
   position: relative;
   display: flex;
